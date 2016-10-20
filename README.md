@@ -2,6 +2,7 @@
 
 ## Запуск проекта
 `rails s`
+
 `bundle exec sidekiq`
 
 Cбор новостей из различных rss лент запускается rake таском 
@@ -18,7 +19,10 @@ Cбор новостей из различных rss лент запускает
 
 
 ## API
-`http://localhost:3000/api/v0/articles.json
-http://localhost:3000/api/v0/articles.json?limit=3&offset=2
-http://localhost:3000/api/v0/articles.json?limit=3&offset=1&search=Маленький Фил
-http://localhost:3000/api/v0/articles/3`
+`http://localhost:3000/api/v0/articles.json`
+
+`http://localhost:3000/api/v0/articles.json?limit=3&offset=2`
+
+`http://localhost:3000/api/v0/articles.json?limit=3&offset=1&search=Маленький Фил`
+
+`http://localhost:3000/api/v0/articles/3`
