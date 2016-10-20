@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
+gem 'pg_search'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 
@@ -13,6 +14,7 @@ gem 'sidekiq-cron'
 gem 'sinatra', github: 'sinatra'
 gem 'multi_xml'
 
+gem 'active_model_serializers', '~> 0.10.0'
 gem 'kaminari'
 
 # Use SCSS for stylesheets

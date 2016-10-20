@@ -1,6 +1,7 @@
 require 'rubygems'
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
+# require 'rspec/rails'
 require 'database_cleaner'
 
 
@@ -16,6 +17,10 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
   config.order = :random
+
+  Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+
+  config.include Requests::JsonHelpers, type: :request
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation

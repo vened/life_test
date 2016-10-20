@@ -10,6 +10,8 @@ class ParseNewsJob < ActiveJob::Base
       category = Category.find_or_create_by(title: item['category'])
       article  = Article.find_or_create_by(
           title:       item['title'],
+      )
+      article.update(
           link:        item['link'],
           description: item['description'],
           pubDate:     item['pubDate'],
